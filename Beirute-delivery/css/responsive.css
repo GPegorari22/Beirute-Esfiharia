@@ -1,0 +1,2291 @@
+/* ==================== RESPONSIVE COMPLETO USUARIO ==================== */
+
+/* ==================== MOBILE FIRST - EXTRA SMALL (max 480px) ==================== */
+
+@media (max-width: 480px) {
+  /* Global */
+  * {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body {
+    background-color: var(--areia) !important;
+    overflow-x: hidden;
+  }
+
+  main {
+    margin-top: 10px !important;
+    margin-left: 0 !important;
+    padding: 12px !important;
+  }
+
+  /* ========== CAROUSEL ========== */
+  .carousel {
+    /* For mobile we want a fixed banner size to match the requested artboard */
+    width: 430px !important;
+    max-width: 92% !important; /* allow small-screen fallback */
+    height: 470px !important;
+    margin: 8px auto !important; /* center on narrow screens */
+    border-radius: 12px;
+    overflow: hidden !important;
+    display: block !important;
+  }
+
+  .carousel-track img {
+    width: 430px !important;
+    max-width: 100% !important;
+    height: 470px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .carousel-btn {
+    font-size: 16px;
+    padding: 4px 6px !important;
+  }
+
+  /* ========== CARDS CATEGORIA ========== */
+  /* Em telas pequenas usamos carrossel horizontal mostrando 2 cards por frame */
+  .card-categoria-wrapper .nav-btn { display: none !important; }
+
+  .card-categoria {
+    /* permitir rolagem horizontal, mas liberar overflow vertical para imagens não serem cortadas */
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    touch-action: none !important;
+    -ms-overflow-style: none !important; /* IE/Edge */
+    scrollbar-width: none !important; /* Firefox */
+    width: 100% !important;
+    /* diminuir margem superior para aproximar do título em telas menores */
+    margin: 6px auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 14px !important;
+    padding: 10px 8px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Two cards visible per frame */
+  .card-categoria .card {
+    min-width: calc(50% - 12px) !important;
+    max-width: calc(50% - 12px) !important;
+    flex: 0 0 auto !important;
+    padding: 16px 12px 20px !important;
+    scroll-snap-align: start !important;
+    box-sizing: border-box !important;
+  }
+
+  .card-categoria .card img {
+    width: 120px;
+    height: 120px;
+    top: -50px;
+  }
+
+  .card-categoria .card h3 {
+    font-size: 14px;
+    padding: 6px 16px;
+    width: 120px;
+  }
+
+  /* ========== BIRUTINHA NA PÁGINA SOBRE ========== */
+  .birutinha {
+    width: 80% !important;
+    margin: 20px auto !important;
+  }
+
+  /* Mover botão WhatsApp mais para cima no mobile */
+  .whatsapp-float-mobile {
+    bottom: 110px !important;
+    right: 18px !important;
+  }
+
+  /* ========== IMAGENS NA PÁGINA SOBRE ========== */
+  .sobre-img-desktop,
+  .sobre-img-entrega {
+    width: 100% !important;
+    height: auto !important;
+    margin: 15px auto !important;
+    display: block !important;
+  }
+
+  /* ========== MAIS PEDIDOS ========== */
+  
+.mp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: 150px;
+  background-color: var(--azul-escuro);
+  padding: 20px;
+  height: 200px;
+  width: 400px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-left: -35px !important;
+}
+
+.nome-esfiha {
+  background-color: var(--branco);
+  height: 40px;
+  width: 200px !important;
+  border-radius: 80px;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5px;
+  color: var(--dourado) !important;
+  font-weight: bolder;
+}
+
+.text-star h3 {
+  text-align: left;
+  font-size: 18px;
+  color: var(--branco);
+  padding-top: 8px;
+}
+
+.card-conteudo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative; /* tornar pai referência para img-produto (absolute) */
+}
+
+.info-produto h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  color: var(--branco);
+  border-radius: 80px;
+  margin-left: 0;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.h3 {
+  font-size: 20px;
+  color: var(--branco);
+  margin-top: 10px;
+  text-align: left;
+  text-align: center;
+}
+
+
+.botao-pedir {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.botao-mp {
+  background-color: var(--branco);
+  height: 40px;
+  width: 240px;
+  border-radius: 80px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px !important;
+}
+
+.botao-mp p {
+  text-align: center;
+  font-size: 24px;
+  color: var(--azul-escuro);
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+}
+
+.star {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--branco);
+}
+
+.text-star {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.mais-pedidos {
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.mais-pedidos {
+  background-color: var(--dourado);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 525px;
+  border-radius: 20px;
+  padding-bottom: 20px !important;
+}
+
+
+  /* Keep button white while text remains blue on desktop, invert on mobile to match desktop look */
+  .card-mais-pedidos .botao-mp {
+    background-color: var(--branco) !important;
+    color: var(--azul-escuro) !important;
+    min-width: 140px !important;
+    height: 36px !important;
+    padding: 6px 14px !important;
+    font-size: 16px !important;
+  }
+  
+
+  /* image styling for mobile only — don't override desktop absolute positioning */
+  @media (max-width: 768px) {
+    .img-produto {
+      position: static !important;
+      width: 100px !important;
+      height: 100px !important;
+      left: auto !important;
+      margin: 0 !important;
+    }
+  }
+
+  .nome-esfiha {
+    width: 100% !important;
+    margin: 0 !important;
+    font-size: 14px;
+  }
+
+  .info-produto h1 {
+    font-size: 24px !important;
+    margin: 8px 0 !important;
+  }
+
+  .botao-mp {
+    width: 100% !important;
+    height: 36px;
+    font-size: 14px !important;
+  }
+
+  .combo-alerta {
+    width: 100%;
+  }
+
+  .img-comboalerta {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .combo-alerta a {
+    width: 90% !important;
+    height: 45px;
+    font-size: 16px !important;
+    padding: 12px !important;
+  }
+
+  /* ========== CARDÁPIO ========== */
+  .cardapio-principal {
+    width: 100% !important;
+    margin: 20px auto !important;
+  }
+
+  .cardapio-principal h1 {
+    font-size: 28px !important;
+  }
+
+  .grid-cardapio {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 30px !important;
+    margin-top: 150px !important;
+  }
+
+
+
+  .circulo {
+    width: 100% !important;
+    height: 140px;
+    position: static;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    background: none;
+  }
+
+  .circulo img {
+    width: 120px !important;
+    height: 120px !important;
+    margin-top: -60px !important;
+  }
+
+  .add h1 {
+    font-size: 20px !important;
+    width: 100% !important;
+    color: white;
+  }
+
+  .add{
+    background: var(--azul-escuro);
+    width: 135px;
+    height: 30px;
+    position: relative;
+    border-radius: 30px;
+    margin-top: -110px !important;
+  }
+
+  .escrita h2 {
+    font-size: 20px;
+    position: static;
+    margin:auto 0 8px 0 !important;
+    margin-top: -90px !important;
+    font-weight: bold;
+    color: var(--azul-escuro);
+  }
+  
+
+  .card-total{
+    width: 180px !important;
+    height: 240px !important;
+    border-radius: 20px;
+  }
+
+  /* ========== MODAL DESCRIÇÃO (copied from 481-768) ========== */
+  .modal-descricao {
+    width: 90% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    background-color: var(--areia) !important;
+    border-top-left-radius: 80px !important;
+    border-top-right-radius: 80px !important;
+  }
+
+  .verbal-descricao{
+    width: 80% !important;
+    margin: 0 auto !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .img-descricao {
+    width: 100% !important;
+    height: 250px !important;
+    position: static !important;
+    left: auto !important;
+    margin: 0 auto 16px !important;
+    border-top-left-radius: 80px !important;
+    border-top-right-radius: 80px !important;
+  }
+
+  .img-descricao img {
+    /* fix: on mobile the product image was rendering at full intrinsic size — limit it
+       and center inside the modal so it looks like the design (circle / overlapping top) */
+    position: absolute !important;
+    top: 90px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 230px !important;
+    height: 230px !important;
+    object-fit: cover !important;
+    border-radius: 100% !important;
+  }
+
+  .verbal-descricao {
+    width: 100% !important;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px !important;
+  }
+
+  .texto-descricao h2 {
+    font-size: 24px !important; /* aumentado para melhor legibilidade no mobile */
+    line-height: 1.15 !important;
+  }
+
+  .texto-descricao p {
+    font-size: 15px !important; /* tamanho maior para leitura confortável */
+    margin: 8px 0 16px !important;
+    color: #223344 !important; /* contraste levemente reforçado no fundo areia */
+    line-height: 1.4 !important;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+ 
+
+  /* tornar o carrinho mais compacto e alinhado em telas muito pequenas */
+  .carrinho .item-carrinho,
+  .item-carrinho {
+    height: 160px !important;
+    margin-left: 0 !important;
+    padding: 10px !important;
+    display: flex !important;
+    flex-direction: row !important; /* imagem + descrição + ações na mesma linha */
+    align-items: center !important;
+    gap: 10px !important;
+    box-sizing: border-box;
+    position: relative !important;
+  }
+
+  .meus-pedidos h3{
+    font-size: 20px !important;
+  }
+
+  .profile-title h1{
+    font-weight: bold !important;
+    font-size: 32px !important;
+  }
+
+
+
+
+
+  .carrinho .verbal-item,
+  .verbal-item {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .carrinho .descricao-item,
+  .descricao-item {
+    margin-right: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .qntd-item {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  right: -20px;
+  top: 28%;
+}
+
+/* ===== Compactar informações de pedido no mobile ===== */
+@media (max-width: 480px) {
+  /* cards de pedido mais compactos */
+  .pedido-card {
+    padding: 8px !important;
+    margin: 8px auto !important;
+    border-radius: 10px !important;
+    box-shadow: none !important;
+  }
+
+  .meus-pedidos-section{
+    margin-top: 120px !important;
+  }
+
+  .pedido-header { gap: 6px !important; align-items: center !important; }
+  .pedido-id { font-size: 15px !important; margin: 0 !important; }
+  .pedido-data { font-size: 12px !important; color: rgba(0,0,0,0.6) !important; }
+  .pedido-status .badge-status { font-size: 12px !important; padding: 4px 8px !important; }
+
+  /* Resumir info — esconder labels e deixar só conteúdo em uma linha com ellipsis */
+  .pedido-info-grid { gap: 6px !important; }
+  .pedido-info-item strong { display: none !important; }
+  .pedido-info-item p {
+    font-size: 13px !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+  }
+
+  /* reduzir destaque do valor mas manter visível */
+  .pedido-valor { font-size: 14px !important; font-weight: 700 !important; }
+
+  /* produtos: esconder colunas secundárias (qtd e preço unit.) e mostrar apenas produto + subtotal */
+  .pedido-card table thead th:nth-child(2),
+  .pedido-card table thead th:nth-child(3),
+  .pedido-card table tbody td:nth-child(2),
+  .pedido-card table tbody td:nth-child(3) {
+    display: none !important;
+  }
+
+  /* reduzir padding e deixar texto menor na lista de produtos */
+  .pedido-card table tbody td,
+  .pedido-card table thead th {
+    padding: 6px 6px !important;
+    font-size: 13px !important;
+  }
+
+  .pedido-card table tbody img { width: 44px !important; height: 44px !important; }
+
+  /* remover descrição longa dos produtos (para a versão compacta) */
+  .pedido-card table tbody div[style*="font-size:13px"] { display: none !important; }
+
+  /* ajustar o container do bloco Produtos para ficar mais enxuto */
+  .pedido-card > div[style*="background:#fff"] { padding: 8px !important; margin-top: 6px !important; }
+}
+
+.escrito{
+  top: 25%;
+}
+
+
+  .qntd-item .qtd {
+  background-color: var(--branco);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 30px !important;
+  background-color: var(--branco) !important;
+  border-radius: 12px;
+}
+  /* controladores + / - devem ser inline no mobile (não posicionados absolute) */
+  .carrinho .increment,
+  .carrinho .decrement,
+  .increment,
+  .decrement {
+    width: 50px !important;
+    height: 30px !important;
+    font-size: 20px !important;
+    border-radius: 18px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  .increment {
+  position: absolute;
+  top: -20px !important;
+}
+
+.decrement {
+  position: absolute;
+  bottom: -20px !important;
+}
+
+  /* ajustar imagem no carrinho mobile: aumentar para melhor visualização (sem margem negativa) */
+  .carrinho .img-item,
+  .item-carrinho .img-item {
+    width: 110px !important;
+    height: 110px !important;
+    margin-left: -38px !important;
+    border-radius: 12px !important;
+    object-fit: cover !important;
+  }
+
+  .escrito p{
+    margin: 0 !important;
+    font-weight: bold !important;
+  }
+
+  /* botões de ação (lixeira / favorito) - compactos */
+  .carrinho .acoes-item button,
+  .acoes-item button,
+  .trash, .coracao {
+    width: 68px !important;
+    height: 36px !important;
+    padding: 6px !important;
+    border-radius: 18px !important;
+    font-size: 14px !important;
+    
+  }
+
+  .meus-pedidos {
+    width: 100% !important;
+  }
+
+  .resumo-pedido {
+    width: 100% !important;
+  }
+
+  /* ========== FINALIZAR PEDIDO ========== */
+  .dados-entrega {
+    height: auto;
+    padding: 16px !important;
+    gap: 16px;
+  }
+
+  .dados-entrega h1 {
+    font-size: 24px !important;
+  }
+
+  #form-endereco {
+    width: 100% !important;
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px !important;
+  }
+
+  .campo-entrega {
+    width: 100%;
+  }
+
+  .campo-entrega input,
+  .campo-entrega select {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .linha-dupla {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .botao-entregar {
+    width: 90% !important;
+    height: 44px;
+  }
+
+  .label-observacao {
+    font-size: 16px;
+    margin-left: 0 !important;
+  }
+
+  .box-obs {
+    width: 95% !important;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .opcoes-pagamento {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .card-pagamento {
+    width: 120px;
+    height: 100px;
+  }
+
+  .card-pagamento img {
+    width: 60px;
+  }
+
+  .btn-confirmar {
+    width: 90% !important;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  /* ========== PERFIL ========== */
+  .profile-container {
+    max-width: 100% !important;
+    margin: 20px auto !important;
+  }
+
+  .profile-title {
+    font-size: 24px;
+    margin-top: 86px !important;
+  }
+
+  .profile-main-card {
+    flex-direction: column;
+    height: auto;
+    padding: 16px !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    margin-left: 0 !important;
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-info h2 {
+    font-size: 18px;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0 !important;
+    align-items: center !important; /* centraliza filhos quando empilhados */
+  }
+
+  .profile-actions .btn {
+    width: 100%;
+  }
+
+  /* Garantir que o botão de logout fique centralizado e com largura apropriada no mobile */
+  .profile-actions .btn-logout {
+    /* Se desejar que fique menor e centralizado use auto width + align-self */
+    width: 318px !important;
+    align-self: center !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+  }
+
+  .meusdados {
+    width: 100% !important;
+  }
+
+  /* Garantir que no mobile o topo do perfil ocupe 100% e os blocos empilhem */
+  .profile-top {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 12px !important;
+    height: auto !important;
+  }
+
+  .dados-usuario {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-top: 12px !important;
+    width: 100% !important;
+  }
+
+  .profile-main-card {
+    width: calc(100% - 24px) !important;
+    max-width: 520px !important;
+    border-radius: 20px !important;
+    padding: 18px !important;
+  }
+
+  .profile-avatar {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .btn .btn-logout{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .profile-info h2 { font-size: 20px !important; }
+
+  .meusdados {
+    width: calc(100% - 24px) !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
+    padding: 12px !important;
+  }
+
+/* === Aplicar mesma formatação também para telas maiores (tablet / desktop) === */
+@media (min-width: 769px) {
+  .profile-top {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important; /* manter empilhamento para todos os tamanhos conforme pedido */
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 12px !important;
+    height: auto !important;
+  }
+
+  .dados-usuario {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-top: 12px !important;
+    width: 100% !important;
+  }
+
+  .profile-main-card {
+    width: calc(100% - 24px) !important;
+    max-width: 720px !important;
+    border-radius: 20px !important;
+    padding: 18px !important;
+  }
+
+  .profile-avatar {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 140px !important;
+    height: 140px !important;
+  }
+
+  .profile-info h2 { font-size: 22px !important; }
+
+  .meusdados {
+    width: calc(100% - 24px) !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
+    padding: 14px !important;
+  }
+}
+
+/* ÚLTIMO OVERRIDE: garantir empilhamento em dispositivos muito pequenos */
+@media (max-width: 480px) {
+  main .carrinho-total, .carrinho-total {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 60px !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    margin: 12px auto !important;
+    box-sizing: border-box !important;
+  }
+
+  main .carrinho-total > .carrinho,
+  main .carrinho-total > .meus-pedidos,
+  .carrinho-total > .carrinho,
+  .carrinho-total > .meus-pedidos {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ====== FORÇAR EMPILHAMENTO DO CARRINHO NO MOBILE (última declaração para garantir precedence) ====== */
+@media (max-width: 480px) {
+  /* regras com maior especificidade para evitar sobrescritas acidentais */
+  main .carrinho-total,
+  .carrinho-total {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    margin: 12px auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .item-carrinho {
+    width: 315px !important;
+  }
+
+  main .carrinho-total > .carrinho,
+  main .carrinho-total > .meus-pedidos,
+  .carrinho-total > .carrinho,
+  .carrinho-total > .meus-pedidos {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+}
+
+  .profile-data-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .info-block {
+    padding: 8px !important;
+  }
+
+  .pedidos-lista {
+    gap: 10px;
+  }
+
+  .pedido-card {
+    border-radius: 10px;
+  }
+
+  .pedido-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .pedido-footer {
+    flex-direction: column;
+  }
+
+  .btn-pedido,
+  .btn-pedido-cancelar {
+    width: 100%;
+  }
+
+  /* ========== SOBRE ==================== */
+  .sobre-hero {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    padding: 40px 16px !important;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .sobre-hero-content {
+    max-width: 100%;
+  }
+
+  .sobre-titulo-principal {
+    font-size: 28px;
+  }
+
+  .sobre-subtitulo {
+    font-size: 16px;
+  }
+
+  .sobre-hero-decoracao {
+    display: none;
+  }
+
+  .valores-container,
+  .equipe-container,
+  .contato-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* ========== MAPA LOCALIZAÇÃO ========== */
+  .localizacao-section {
+    width: 100%;
+    padding: 30px 16px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(135deg, var(--azul-escuro) 0%, #1a4d6d 100%);
+    margin: 30px 0 !important;
+  }
+
+  .localizacao-titulo {
+    font-family: 'Simple-Serenity', serif;
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    color: var(--dourado) !important;
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .mapa-container {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--dourado);
+  }
+
+  .mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+
+  /* ========== DELIVERY ==================== */
+  .delivery-hero {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    grid-template-columns: 1fr;
+    padding: 40px 16px !important;
+  }
+
+  .delivery-titulo {
+    font-size: 28px;
+  }
+
+  .delivery-subtitulo {
+    font-size: 16px;
+  }
+
+  .delivery-processo,
+  .delivery-diferenciais,
+  .delivery-cta,
+  .delivery-area,
+  .delivery-faq {
+    margin-left: 0 !important;
+    padding: 40px 16px !important;
+  }
+
+  .delivery-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-diferenciais-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .delivery-area-info {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-placeholder-mapa {
+    height: 250px;
+  }
+
+  /* ========== FOOTER ==================== */
+  .footer {
+    margin-left: 0 !important;
+    padding: 30px 16px 20px !important;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-links {
+    text-align: center;
+    align-items: center;
+  }
+
+  footer.footer-beirute {
+    margin-right: 0 !important;
+    margin-top: -3px !important;
+    width: 402.5px !important;
+  }
+
+  .footer-content {
+    gap: 30px;
+  }
+
+  .img-footer img {
+    margin-right: 0 !important;
+  }
+
+  /* ========== BUSCA ========== */
+  .search-results {
+    width: calc(100% - 20px) !important;
+    left: 10px !important;
+    right: 10px !important;
+  }
+
+  .resultados-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .resultado-card-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* ========== BUSCA MOBILE (dentro do topo-mobile) ========== */
+  .search-bar-mobile {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    max-width: 100%;
+    background: transparent;
+    margin: 8px 0 !important;
+    position: relative;
+  }
+
+  .search-bar-mobile input {
+    flex: 1;
+    padding: 8px 12px !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    background: rgba(255,255,255,0.95) !important;
+    color: #333 !important;
+    outline: none;
+  }
+
+  .search-bar-mobile input::placeholder {
+    color: #999 !important;
+  }
+
+  .search-bar-mobile input:focus {
+    border-color: var(--dourado) !important;
+    box-shadow: 0 0 8px rgba(144, 109, 54, 0.2) !important;
+  }
+
+  .search-btn-mobile {
+    background: var(--dourado) !important;
+    color: var(--branco) !important;
+    border: none;
+    padding: 8px 12px !important;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+  }
+
+  .search-btn-mobile:hover {
+    transform: scale(1.05);
+    background-color: #b78c46 !important;
+  }
+
+  .search-results-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 5000;
+    display: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .search-results-mobile.ativo {
+    display: block;
+  }
+
+  .search-results-mobile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .search-result-item-mobile {
+    transition: all 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .search-result-item-mobile:hover {
+    background: #f9f9f9 !important;
+    transform: translateY(-2px);
+  }
+}
+
+
+/* Tablets / pequenos dispositivos - usar carrossel horizontal com 2 cards por frame */
+@media (max-width: 768px) {
+  .card-categoria {
+    /* esconder barra de rolagem, prevenir scroll por toque (apenas setas) */
+    overflow-x: auto !important;
+    touch-action: none !important;
+    -ms-overflow-style: none !important; /* IE/Edge */
+    scrollbar-width: none !important; /* Firefox */
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 14px !important;
+    padding: 10px 8px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    /* esconder indicadores (bolinhas) - deixamos só as setas */
+    #cardCategoriaDots { display: none !important; }
+  }
+
+  .card-categoria .card {
+    min-width: calc(50% - 12px) !important;
+    max-width: calc(50% - 12px) !important;
+    flex: 0 0 auto !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* ajuste da imagem para fit */
+  /* subir visualmente o card (diminuir top negativo) para centralizar com as setas */
+  .card-categoria .card {
+    /* garantir que o card permita que a imagem extrapole para cima */
+    overflow: visible !important;
+  }
+
+  .card-categoria .card img { width: 200px !important; height: 200px !important; top: -40px !important; }
+  /* setas de navegação dentro do wrapper */
+  .card-categoria-wrapper {
+    position: relative;
+    display: flex !important;
+    align-items: center !important; /* centraliza verticalmente o conteúdo do wrapper */
+    gap: 0 !important;
+  }
+
+  .card-categoria-wrapper .nav-btn {
+    position: absolute !important;
+    top: 45% !important;
+    transform: translateY(-50%) !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    border: none !important;
+    background: rgba(20,56,102,0.9) !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 30 !important;
+    cursor: pointer !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18) !important;
+    z-index: 9999 !important; /* acima de conteúdo */
+    pointer-events: auto !important;
+    /* pequeno deslocamento via margin-top para empurrar as setas um pouco para baixo */
+    margin-top: 20px !important;
+  }
+  .card-categoria-wrapper .nav-btn.left { left: 8px !important; }
+  .card-categoria-wrapper .nav-btn.right { right: 8px !important; }
+  .card-categoria-wrapper .nav-btn[disabled] { opacity: 0.35; cursor: default; }
+}
+
+/* Muito pequenos -> apenas 1 por frame */
+@media (max-width: 420px) {
+  .card-categoria .card { min-width: calc(100% - 40px) !important; max-width: calc(100% - 40px) !important; }
+}
+
+/* ==================== SMALL (481px - 768px) ==================== */
+
+@media (max-width: 768px) and (min-width: 481px) {
+  main {
+    margin-top: 86px !important;
+    margin-left: 0 !important;
+    margin-bottom: 90px !important;
+    padding: 16px !important;
+  }
+
+  .carousel {
+    width: 98% !important;
+    margin: 12px auto !important;
+  }
+
+  .carousel-track img {
+    min-height: 200px;
+  }
+
+  .card-categoria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .verbal-descricao p{
+    font-size: 18px;
+    margin: 8px 0 16px !important;
+    color: #0f142e;
+  }
+
+  .verbal-descricao h2{
+    margin-top: 150px !important;
+  }
+
+  .close-btn{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: var(--dourado);
+  }
+
+  .qtd-descricao{
+    background-color: var(--dourado);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .adicionar-carrinho{
+    background-color: var(--dourado);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #modal-qtd{
+    color: var(--dourado);
+    font-weight: bold;
+  }
+
+   /* ========== CARRINHO ========== */
+  .carrinho-total {
+    /* mobile: empilhar as seções do carrinho */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    margin: 12px auto 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .carrinho {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .verbal-descricao h3{
+    font-size: 48px;
+    margin: 8px 0 !important;
+    color: var(--dourado);
+    font-weight: bolder;
+  }
+
+  .card-categoria .card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .destaques {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mais-pedidos {
+    width: 100% !important;
+  }
+
+  .grid-cardapio {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .modal-descricao {
+    width: 90% !important;
+    height: auto !important;
+    flex-direction: column;
+    background-color: var(--areia);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+  }
+
+  .verbal-descricao{
+    width: 80% !important;
+    margin: 0 auto !important;
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+  .img-descricao {
+    width: 100% !important;
+    height: 250px !important;
+    position: static;
+    left: auto !important;
+    margin: 0 auto 16px !important;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+  }
+
+  .img-descricao img {
+    position: absolute;
+    top: 60px;
+  }
+ 
+  
+
+  .carrinho-total {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .carrinho,
+  .meus-pedidos {
+    width: 100% !important;
+  }
+
+  /* TORNA O LAYOUT DO CARRINHO AMIGÁVEL EM TABLET/PHONE (sobrescreve header.css) */
+  .item-carrinho {
+    width: 100% !important;
+    height: auto;
+    margin-left: 0 !important; /* remover deslocamento lateral do desktop */
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: row !important; /* imagem + texto + ações em linha */
+    align-items: center !important;
+    gap: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* imagem do produto no carrinho — aumentar para mobile, sem margin negativa */
+  .item-carrinho .img-item{
+    left: auto !important;
+    margin-left: 0 !important;
+    width: 96px !important;
+    height: 96px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+  }
+
+  /* very small phones: reduce slightly to avoid overflow */
+  @media (max-width: 340px) {
+    .carrinho .img-item,
+    .item-carrinho .img-item {
+      width: 84px !important;
+      height: 84px !important;
+    }
+  }
+
+  #form-endereco {
+    width: 100% !important;
+    flex-direction: column;
+  }
+
+  .linha-dupla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-main-card {
+    padding: 16px !important;
+  }
+
+  .profile-data-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pedido-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .delivery-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .resultados-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+/* ==================== MÉDIUM (769px - 991px) ==================== */
+
+@media (min-width: 769px) and (max-width: 991px) {
+  main {
+    margin-top: 100px !important;
+    margin-left: 0 !important;
+  }
+
+  .carousel {
+    width: 95% !important;
+  }
+
+  .carousel-track img {
+    min-height: 250px;
+  }
+
+  .card-categoria {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .grid-cardapio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-data-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resultados-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==================== LARGE (992px+) ==================== */
+
+@media (min-width: 992px) {
+  main {
+    margin-top: 100px !important;
+    margin-left: 280px !important;
+  }
+
+  .carousel {
+    width: 90% !important;
+  }
+
+  .carousel-track img {
+    min-height: 300px;
+  }
+
+  .card-categoria {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .grid-cardapio {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .footer {
+    margin-left: 280px;
+  }
+}
+
+/* ==================== AJUSTES MOBILE ==================== */
+
+@media (max-width: 991.98px) {
+  main {
+    padding-bottom: 80px !important;
+    padding-top: 0 !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 80px !important;
+    padding-top: 0 !important;
+    margin: 0 !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-bottom: 80px !important;
+    padding-top: 0 !important;
+    margin: 0 !important;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .topo-mobile {
+    margin: 0 !important;
+  }
+}
+/* ==================== MENU HAMBURGUER ==================== */
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 3em;
+  width: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 20px !important;
+}
+
+.line {
+  fill: none;
+  stroke: var(--dourado) !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition:
+    stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* ==================== MENU EXPANSÍVEL ==================== */
+
+.menu-expandido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+    /* Tornar o fundo completamente opaco para evitar transparência sobre o conteúdo abaixo
+      e garantias regras */
+    background-color: var(--azul-escuro);
+    background-image: linear-gradient(135deg, var(--azul-escuro) 0%, rgba(19, 51, 73, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    backdrop-filter: none;
+    z-index: 9999;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.menu-expandido.ativo {
+  height: 50vh;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-expandido nav {
+  position: relative;
+  padding-top: 80px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.menu-expandido.ativo nav {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-expandido nav .hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-expandido .hamburger svg {
+  transform: rotate(-45deg);
+}
+
+.menu-expandido .hamburger .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+.menu-expandido ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-top: 100px !important;
+  margin-bottom: 0 !important;
+}
+
+.menu-expandido ul li {
+  margin: 20px 0 !important;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-expandido.ativo ul li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-expandido.ativo ul li:nth-child(1) { transition-delay: 0.1s; }
+.menu-expandido.ativo ul li:nth-child(2) { transition-delay: 0.2s; }
+.menu-expandido.ativo ul li:nth-child(3) { transition-delay: 0.3s; }
+.menu-expandido.ativo ul li:nth-child(4) { transition-delay: 0.4s; }
+
+.menu-expandido ul li a {
+  color: var(--areia) !important;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 35px;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 18px;
+}
+
+.menu-expandido ul li a:hover {
+  color: var(--dourado) !important;
+}
+
+/* ==================== TOPO MOBILE COM HAMBURGER ==================== */
+
+.topo-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* aumento adicional do topo para mais presença visual */
+  height: 240px; /* +40px no total, solicitado aumento extra */
+  width: 100%;
+  padding: 15px 20px !important;
+  background-color: var(--azul-escuro);
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  z-index: 500;
+}
+
+.topo-mobile section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.topo-mobile .logo {
+  height: auto;
+  /* Aumentado para deixar a marca mais imponente no topo curvo */
+  width: 320px !important; /* aumentado mais para ficar mais visível */
+  flex-shrink: 0;
+}
+
+/* ==================== RESPONSIVO ==================== */
+
+@media (max-width: 991.98px) {
+  .topo-mobile {
+    display: flex;
+  }
+
+  .hamburger svg {
+    height: 2.5em;
+    width: 2.5em;
+  }
+
+  .menu-expandido.ativo {
+    height: 50vh;
+    background-color: solid var(--azul-escuro) !important;
+  }
+
+  .menu-expandido ul {
+    margin-top: 60px !important;
+  }
+
+  .menu-expandido ul li a {
+    font-size: 28px;
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .topo-mobile {
+    padding: 12px 20px !important;
+  }
+
+  .hamburger svg {
+    height: 2.2em;
+    width: 2.2em;
+  }
+
+  .menu-expandido.ativo {
+    height: 45vh;
+  }
+
+  .menu-expandido nav {
+    padding-top: 60px !important;
+  }
+
+  .menu-expandido nav .hamburger {
+    top: 15px;
+    right: 15px;
+  }
+
+  .menu-expandido ul {
+    margin-top: 40px !important;
+  }
+
+  .menu-expandido ul li {
+    margin: 15px 0 !important;
+  }
+
+  .menu-expandido ul li a {
+    font-size: 22px;
+    padding: 12px !important;
+  }
+
+  .topo-mobile .logo {
+    /* Ajuste em telas médias (tablet) */
+    max-width: 340px; /* aumentado mais para tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .topo-mobile {
+    padding: 10px 15px !important;
+  }
+
+  .hamburger svg {
+    height: 2em;
+    width: 2em;
+  }
+
+  .menu-expandido.ativo {
+    height: 40vh;
+  }
+
+  .menu-expandido ul li a {
+    font-size: 20px;
+    padding: 10px !important;
+  }
+
+  .topo-mobile .logo {
+    /* Ajuste em telas muito pequenas (celular) */
+    max-width: 170px; /* aumentado em mobile */
+  }
+}
+
+/* ==================== FOOTER MOBILE ==================== */
+
+@media (max-width: 991.98px) {
+  footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20px 20px 10px !important;
+  }
+
+  footer section {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 15px 15px 10px !important;
+  }
+
+  footer section {
+    width: 100% !important;
+  }
+
+  footer .logo {
+    max-width: 120px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 12px 10px 8px !important;
+  }
+
+  footer section {
+    width: 100% !important;
+  }
+
+  footer .logo {
+    max-width: 100px !important;
+  }
+
+  footer a {
+    font-size: 14px !important;
+  }
+
+  footer h3,
+  footer h4 {
+    margin: 8px 0 !important;
+  }
+
+  footer ul {
+    gap: 4px !important;
+  }
+}
+
+/* ==================== NOTIFICAÇÕES (TOPO MOBILE) ==================== */
+
+/* mobile: reduzir gaps e alinhar notificação mais perto do hambúrguer */
+.topo-mobile-icons { 
+  gap: 6px; 
+  align-items: center; 
+  display: flex; 
+  /* empurra os ícones para o lado direito e agrupa com o hamburger */
+  margin-left: auto !important; 
+  margin-right: 6px !important; 
+  margin-top: 6px !important;
+}
+
+/* garante que o ícone fique visível sobre o fundo escuro */
+.notif-icon {
+  color: var(--dourado);
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* reduzir margem direita para aproximar do hamburger */
+  margin-right: 2px !important;
+}
+
+/* badge vermelha sobre o ícone */
+.notif-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #d9534f;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* dropdown adaptado para mobile, acima do menu expansível */
+.notif-dropdown-mobile {
+  display: none;
+  position: fixed !important;
+  top: 62px !important;
+  right: 12px !important;
+  width: calc(100% - 40px) !important;
+  max-width: 360px !important;
+  background: #fff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18) !important;
+}
+
+/* aproximação extra do hamburger para mobile */
+.topo-mobile .hamburger { margin-left: 4px !important; }
+
+/* quando aberto pelo JS, forçar display block */
+.notif-dropdown-mobile.ativo { display: block !important; }
+
+/* pequenas correções para evitar que o menu expansível cubra o dropdown */
+.menu-expandido { z-index: 1100; }
+
+ 
+
+/* =================== MOBILE CARROSSEL =================== */
+@media (max-width: 768px) {
+
+  .categoria-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden !important;
+    margin: 15px auto;
+  }
+
+  .categoria-track {
+    display: flex;
+    transition: transform 0.35s ease;
+  }
+
+  .categoria-track .card {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    min-height: 260px !important;
+    padding: 70px 20px 35px !important;
+
+    box-sizing: border-box !important;
+    border-radius: 22px;
+    margin: 0 !important;
+  }
+
+  .categoria-track .card img {
+    width: 180px !important;
+    height: 180px !important;
+    top: -55px !important;
+  }
+
+  .categoria-track .card h3 {
+    width: auto !important;
+    font-size: 20px;
+  }
+
+  .categoria-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--azul-escuro);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    z-index: 100;
+    border: none;
+  }
+
+  .prev-cat { left: 8px; }
+  .next-cat { right: 8px; }
+}
+
+/* ======= CORREÇÕES DO FORMULARIO FINALIZAR (MOBILE) ======= */
+/* garante espaçamento correto abaixo do topo curvo e evita sobreposição */
+@media (max-width: 991.98px) {
+  /* topo-mobile ficou alto e escondia parte do conteúdo — reduzimos e ajustamos o espaço do main */
+  .topo-mobile {
+    height: 180px !important; /* aumento extra (+20px) para mobile */
+    padding: 12px 16px !important;
+    border-bottom-left-radius: 80% !important;
+    border-bottom-right-radius: 80% !important;
+  }
+  main {
+    /* conteúdo mais próximo ao header: reduzir espaçamento */
+    margin-top: -10px !important; /* ajuste fino para aproximar sem sobrepor */
+    padding-top: 0 !important;
+  }
+
+  /* evita que o menu expansível ou elementos de topo cubram o formulário */
+  .menu-expandido { z-index: 1200 !important; }
+  .topo-mobile { z-index: 1300 !important; }
+
+  /* deixa a seção de dados com prioridade visual sobre fundos/curvas */
+  .dados-entrega {
+    position: relative !important;
+    z-index: 1400 !important;
+    margin-top: 6px !important;
+    padding: 14px !important;
+    background: transparent !important; /* mobile: cartão branco aplicado separadamente abaixo */
+    gap: 12px !important;
+  }
+
+  /* Aplicar cartão branco somente em mobile para destacar o formulário sem alterar desktop */
+  .dados-entrega.cardificado {
+    background: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
+    border-radius: 14px !important;
+    padding: 18px !important;
+    margin: 10px 12px 18px 12px !important;
+    color: #133349 !important;
+  }
+
+  /* Garantir contraste dos inputs dentro do cartão */
+  .dados-entrega.cardificado .label-destinatario input,
+  .dados-entrega.cardificado .label-destinatario textarea,
+  .dados-entrega.cardificado .box-obs input {
+    background: #ffffff !important;
+    color: #133349 !important;
+    border: 1px solid rgba(0,0,0,0.06) !important;
+  }
+
+  /* Corrigir título e subtítulo de pagamento que estavam com margem negativa e muito grande */
+  .titulo-pagamento {
+    font-size: 22px !important;
+    margin-top: 8px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  .subtitulo-pagamento {
+    font-size: 14px !important;
+    margin-top: 6px !important;
+    padding: 0 8px !important;
+  }
+
+  /* reduzir espaçamento das opções de pagamento e permitir quebra se necessário */
+  .opcoes-pagamento {
+    display:flex !important;
+    gap: 12px !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    margin: 16px 0 !important;
+  }
+
+  .card-pagamento {
+    flex: 1 1 calc(33% - 12px) !important;
+    min-width: 90px !important;
+    max-width: 140px !important;
+    height: auto !important;
+    padding: 12px !important;
+  }
+
+  /* remover margens negativas que empurram ícones sobre o conteúdo */
+  .topo-mobile-icons { margin-right: 0 !important; margin-top: 0 !important; }
+
+  /* form layout: inputs em largura total, labels empilhados e sem overflow */
+  #form-endereco,
+  .label-destinatario {
+    width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    margin: 0 0 10px 0 !important;
+  }
+
+  .label-destinatario span { display: block; margin-bottom: 6px; font-size: 14px; color: #133349; }
+
+  .label-destinatario input,
+  .label-destinatario textarea,
+  .box-obs input {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 44px !important;
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(0,0,0,0.06) !important;
+    box-sizing: border-box !important;
+    background: var(--azul-escuro) !important;
+  }
+
+  /* textarea-like input corrigido (observações) */
+  .label-destinatario input[rows],
+  .label-destinatario textarea {
+    min-height: 56px !important;
+    height: auto !important;
+    padding: 10px 12px !important;
+  }
+
+  /* cidade + estado: ajustar proporção */
+  .flex-row { display: flex !important; gap: 8px !important; }
+  .input-cidade { flex: 1 1 70% !important; }
+  .input-estado { flex: 0 0 30% !important; max-width: 68px !important; }
+
+  /* botão salvar centralizado e com largura confortável */
+  .btn-salvar-endereco {
+    width: 100% !important;
+    height: 48px !important;
+    font-size: 16px !important;
+    border-radius: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    margin-top: 6px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 14px !important; /* espaço entre botão e título PAGAMENTO */
+  }
+
+  /* regras mais específicas dentro do container de finalizar pedido */
+  .dados-entrega .titulo-pagamento {
+    font-size: 26px !important;
+    margin-top: 12px !important;
+    margin-bottom: 6px !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+    display: block !important;
+  }
+
+  .dados-entrega .subtitulo-pagamento {
+    font-size: 15px !important;
+    margin-top: 4px !important;
+    padding: 0 12px !important;
+  }
+
+  .opcoes-pagamento { margin-top: 8px !important; }
+
+  /* pagamentos: garantir que os cards não cubram texto abaixo */
+  .opcoes-pagamento { display:flex !important; gap: 12px !important; flex-wrap:wrap !important; justify-content:center !important; }
+  .card-pagamento { flex: 1 1 calc(33% - 12px) !important; min-width: 110px !important; max-width: 140px !important; box-sizing: border-box !important; }
+
+  /* evitar que títulos e campos sejam cobertos por sombras/curvas */
+  .titulo-pagamento,
+  .subtitulo-pagamento {
+    position: relative !important;
+    z-index: 1400 !important;
+  }
+
+  /* corrige inputs que tinham left/margin excessivos em outras regras */
+  input[type="text"], input[type="tel"], input[type="hidden"], input[type="number"] {
+    margin-left: 0 !important;
+    left: auto !important;
+  }
+}
+
+/* pequenas melhorias extras para telas muito pequenas */
+@media (max-width: 480px) {
+  /* maior topo em telas muito pequenas para preservar a curvatura */
+  .topo-mobile { height: 170px !important; }
+  /* reduzir espaço para aproximar conteúdo do topo sem sobrepor o header */
+  main { margin-top: 12px !important; padding: 12px !important; }
+  .card-pagamento { min-width: 98px !important; flex: 1 1 32% !important; }
+  .label-destinatario span { font-size: 13px !important; }
+  .btn-salvar-endereco { font-size: 15px !important; height: 44px !important; }
+}
+
+  /* Overrides para observação e botão confirmar no mobile (corrige largura fixa de 600px) */
+  @media (max-width: 991.98px) {
+    .label-observacao {
+      margin-top: 14px !important;
+      margin-left: 0 !important;
+      font-size: 18px !important;
+      text-align: left !important;
+      padding: 0 12px !important;
+    }
+
+    .box-obs {
+      width: calc(100% - 24px) !important;
+      margin: 12px auto !important;
+      background: var(--dourado) !important;
+      border-radius: 14px !important;
+      padding: 10px 12px !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 10px !important;
+      box-sizing: border-box !important;
+    }
+
+    .box-obs input {
+      flex: 1 !important;
+      width: 100% !important;
+      padding: 10px !important;
+      background: transparent !important;
+      color: #133349 !important;
+      font-weight: 600 !important;
+      border-radius: 8px !important;
+    }
+
+    .btn-confirmar {
+      width: calc(100% - 24px) !important;
+      max-width: 100% !important;
+      margin: 18px auto !important;
+      display: block !important;
+      font-size: 20px !important;
+      height: 56px !important;
+      border-radius: 12px !important;
+    }
+
+    /* garantir espaço entre salvar endereço e título PAGAMENTO */
+    .btn-salvar-endereco { margin-bottom: 22px !important; }
+  }
+
+/* Ajustes para dispositivos com notch / safe-area (ex.: iPhone 14 Pro Max) */
+@supports (padding: env(safe-area-inset-top)) {
+  @media (max-width: 991.98px) {
+    /* adiciona o safe-area ao topo do header e aumenta a margem do main para não sobrepor */
+    .topo-mobile {
+      padding-top: calc(12px + env(safe-area-inset-top));
+    }
+
+    /* for notch devices: keep a small safe gap but much smaller than before so content
+       is visually closer to the header */
+    main {
+      margin-top: calc(20px + env(safe-area-inset-top)) !important;
+    }
+
+    /* garantir que o menu expansível fique acima do conteúdo safe-area */
+    .menu-expandido { z-index: 1200 !important; }
+  }
+}
+
+/* Forçar fundo azul-escuro nos inputs do formulário apenas no mobile (dentro do cartão) */
+@media (max-width: 991.98px) {
+  .dados-entrega.cardificado .label-destinatario input,
+  .dados-entrega.cardificado .label-destinatario textarea,
+  .dados-entrega.cardificado .box-obs input {
+    background: var(--azul-escuro) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    box-shadow: none !important;
+    padding: 12px 14px !important;
+    border-radius: 10px !important;
+    height: 44px !important;
+  }
+
+  .dados-entrega.cardificado .box-obs {
+    background: transparent !important; /* manter o container sem cor extra */
+    padding: 8px 12px !important;
+  }
+
+  .dados-entrega.cardificado .box-obs input::placeholder,
+  .dados-entrega.cardificado .label-destinatario input::placeholder,
+  .dados-entrega.cardificado .label-destinatario textarea::placeholder {
+    color: rgba(255,255,255,0.75) !important;
+  }
+}
+

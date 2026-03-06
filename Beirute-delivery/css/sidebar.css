@@ -1,0 +1,62 @@
+.sidebar {
+    width: 250px;
+    /* centraliza verticalmente e deixa pequena margem à esquerda */
+    position: fixed;
+    background-color: var(--azul-escuro);
+    top: 20px;           /* fixar distância do topo */
+    left: 20px;
+    bottom: 20px;        /* fixa distância do pé — garante altura estável */
+    height: auto;        /* deixar altura definida pelo top/bottom */
+    padding: 20px 0;
+    color: var(--branco);
+    border-radius: 20px;
+    overflow-y: auto;    /* permite rolagem quando conteúdo for maior */
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* logo container — garantir tamanhos consistentes */
+.logo-container {
+    padding: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0 12px 20px 12px;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    color: var(--dourado);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: rgba(183, 139, 70, 0.1);
+    color: var(--branco);
+}
+
+.menu-item i {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.menu-item span {
+    font-size: 14px;
+}

@@ -1,0 +1,192 @@
+/* Importar fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --azul-escuro: #19344f;
+    --dourado: #b78b46;
+    --areia: #f5e3b3;
+    --branco: #ffffff;
+    --preto: #000000;
+    --font-principal: 'Poppins', sans-serif;
+}
+
+
+@font-face {
+    font-family: 'Simple-Serenity';
+    src: url('../fonte/Simple-Serenity-Serif.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos gerais */
+body {
+    background-color: var(--areia) !important;
+    font-family: var(--font-principal);
+    margin-left: 270px;
+}
+
+.content-wrapper {
+    padding: 20px;
+    margin: 0 auto 0 auto !important;
+}
+
+h1 {
+    background-color: var(--azul-escuro);
+    font-family: 'Simple-Serenity', sans-serif;
+    color: var(--branco);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Card total de clientes */
+.card-total {
+    background: linear-gradient(135deg, var(--azul-escuro), #2a5298);
+    color: var(--branco);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(25, 52, 79, 0.2);
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.card-total h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.numero-grande {
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Seção de top clientes */
+.titulo-secao {
+    font-size: 1.5em;
+    color: var(--azul-escuro);
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--dourado);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.top-clientes {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.cliente-card {
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(25, 52, 79, 0.1);
+    flex: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.cliente-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(25, 52, 79, 0.2);
+}
+
+.cliente-foto {
+    width: 80px;
+    height: 80px;
+    background-color: var(--areia);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.cliente-card h3 {
+    margin: 0;
+    color: var(--azul-escuro);
+    font-size: 1.1em;
+    font-family: var(--font-principal);
+}
+
+.cliente-card p {
+    color: var(--dourado);
+    margin: 10px 0 0;
+    font-weight: 500;
+}
+
+/* Tabela de dados */
+.tabela-dados {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(25, 52, 79, 0.1);
+}
+
+.tabela-dados th {
+    background-color: var(--azul-escuro);
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--branco);
+    font-family: var(--font-principal);
+}
+
+.tabela-dados td {
+    padding: 15px;
+    border-top: 1px solid var(--areia);
+    color: var(--azul-escuro);
+}
+
+.tabela-dados tr:hover {
+    background-color: var(--areia);
+}
+
+.badge {
+    background-color: var(--dourado);
+    color: var(--branco);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        margin-left: 0;
+    }
+    
+    .container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .top-clientes {
+        flex-direction: column;
+    }
+
+    .card-total {
+        width: 100%;
+    }
+
+    .tabela-dados {
+        display: block;
+        overflow-x: auto;
+    }
+}

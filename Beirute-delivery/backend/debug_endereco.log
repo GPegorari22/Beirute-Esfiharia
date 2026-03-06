@@ -1,0 +1,4 @@
+2025-12-04T23:10:56+01:00 - Tentativa salvar endereco por userId=6: {"destinatario":"Guilherme Pegorari","telefone":"16981964333","cep":"15910000","rua":"Rua Manoel","numero":"181","bairro":"Canaã","cidade":"Monte Alto","estado":"SP"}
+2025-12-04T23:11:06+01:00 - Tentativa salvar endereco por userId=6: {"destinatario":"Guilherme Pegorari","telefone":"16981964333","cep":"15910000","rua":"Rua Manoel","numero":"181","bairro":"Canaã","cidade":"Monte Alto","estado":"SP"}
+2025-12-04T23:15:17+01:00 - Tentativa salvar endereco por userId=6: {"destinatario":"Guilherme Pegorari","telefone":"16981964333","cep":"15910000","rua":"Rua Manoel","numero":"181","bairro":"Canaã","cidade":"Monte Alto","estado":"SP"}
+2025-12-04T23:15:17+01:00 - Insert succeeded, lastInsertId=1

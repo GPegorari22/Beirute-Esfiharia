@@ -1,0 +1,102 @@
+:root {
+    --azul-escuro: #19344f;
+    --dourado: #b78b46;
+    --areia: #f5e3b3;
+    --branco: #ffffff;
+    --preto: #000000;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'Simple-Serenity';
+    src: url('../fonte/Simple-Serenity-Serif.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url('../img/admin-background.gif');
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: var(--areia);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 406px;
+    height: 509px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .login-info {
+    width: 390px;
+}
+
+form h2 {
+    background-color: var(--dourado);
+    width: 100%;
+    height: 25%;
+    color: var(--azul-escuro);
+    font-family: 'Simple-Serenity', sans-serif;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* labels do formulário de login */
+.login-form label {
+    margin-top: 15px !important;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    font-family: 'Poppins', sans-serif !important;
+    display: block;
+    text-align: left;
+}
+
+form input[type="email"],
+form input[type="password"] ,
+form input[type="text"] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: var(--dourado);
+    border-radius: 18px;
+    padding: 10px !important;
+}
+
+form input[type="submit"] {
+    width: 70%;
+    height: 50px;
+    border: none;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 40px !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

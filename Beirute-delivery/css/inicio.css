@@ -1,0 +1,397 @@
+:root {
+    --azul-escuro: #19344f;
+    --dourado:  #906d36;
+    --areia: #f5e3b3;
+    --branco: #ffffff;
+    --preto: #000000;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'Simple-Serenity';
+    src: url('../fonte/Simple-Serenity-Serif.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: 100vh;
+}
+
+body{
+    background-color: var(--azul-escuro);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px 60px !important;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.logo {
+    width: 600px;
+    margin-bottom: 20px !important;
+    margin-left: 70px;
+    margin-top: -90px !important;
+    position: relative;
+    z-index: 2;
+}
+
+.botao-principal {
+    background-color: var(--dourado);
+    color: var(--branco);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-family: 'Simple-Serenity', serif;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.botao-principal:hover {
+    transform: scale(1.05);
+    background-color: #d4af37;
+}
+
+.linhaum{
+    color: var(--branco);
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 20px 0 !important;
+    line-height: 1.2;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.linhadois{
+    color: var(--dourado);
+    font-family: 'Simple-Serenity', serif;
+    font-size: 48px;
+    margin-bottom: 40px !important;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-img {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.decorative-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.decorative-elements img {
+    position: absolute;
+}
+
+.cube1 {
+    top: 10%;
+    right: 15%;
+    width: 40px;
+    transform: rotate(15deg);
+}
+
+.cube2 {
+    bottom: 20%;
+    right: 35%;
+    width: 30px;
+    transform: rotate(-20deg);
+}
+
+.herb1 {
+    top: 30%;
+    right: 25%;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+.herb2 {
+    bottom: 25%;
+    right: 20%;
+    width: 20px;
+    transform: rotate(-30deg);
+}
+
+
+.botao_bloqueio {
+    font-family: 'Simple-Serenity', sans-serif !important;
+    color: var(--branco);
+    width: 300px;
+    height: 700px !important;
+    padding: 15px !important;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    background-color:  #906d36;
+    border-radius: 80px;
+    box-shadow: 9px 5px 14px 2px #00000066;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -0px !important;
+    transition: all 0.3s ease;
+}
+
+.botao_bloqueio .pj {
+    font-family: 'Simple-Serenity', sans-serif !important;
+    color: var(--branco);
+    font-size: 45px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.conteudo-inicio{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 80vh;
+    justify-content: space-between;
+}
+
+.texto{
+    margin-top: -60px !important;
+
+}
+
+.img-mobile{
+    display: none;
+}
+
+/* mobile-only content placeholder (desktop keeps original content) */
+.gold-content{ display: none; }
+
+/* === Estilos mobile (baseado no frame "bloqueio site" do Figma) === */
+@media (max-width: 480px) {
+    body{
+        padding: 28px 18px !important;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        /* fundo dourado e topo azul arredondado (usado pseudo-elemento) */
+        background: var(--dourado);
+        position: relative; /* necessário para pseudo-elemento */
+    }
+
+    /* topo arredondado azul apenas no mobile */
+    body::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 50vh; /* aumentar a área azul para aproximar o Figma */
+        background: var(--azul-escuro);
+        border-bottom-left-radius: 30%; /* borda mais curvada */
+        border-bottom-right-radius: 30%;
+        z-index: 0;
+        box-shadow: inset 0 -30px 40px rgba(0,0,0,0.08);
+    }
+
+    .logo{
+        width: 320px; /* logo ainda maior */
+        margin: 0 auto 6px auto !important;
+        margin-top: -1100px !important;
+        text-align: center;
+        display: block;
+        z-index: 3;
+    }
+
+    /* posicionar logo/texto centralizados dentro do bloco azul */
+    .conteudo-inicio{
+        width: 92%;
+        max-width: 360px;
+        height: auto;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap: 8px;
+        z-index: 5; /* acima do topo azul */
+        position: absolute;
+        left: 50%;
+        top: 28vh; /* posiciona mais abaixo dentro da área azul */
+        transform: translateX(-50%);
+        padding: 0 12px;
+        text-align: center;
+    }
+
+    /* no mobile escondemos o texto e CTA da versão desktop (usaremos .gold-content abaixo da esfiha) */
+    .conteudo-inicio .texto,
+    .conteudo-inicio .botao_bloqueio { display: none !important; }
+
+    .linhaum{
+        font-size: 16px;
+        text-align: center;
+        margin: 8px 10px 0 10px !important;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    .linhadois{
+        font-size:16px; /* aumentar título */
+        text-align: center;
+        font-family: 'Poppins', sans-serif !important;
+        margin: 0 10px 6px 10px !important;
+    }
+
+    /* Imagem central grande porém com tamanho controlado (desktop fallback hidden on mobile) */
+    .img{
+        position: absolute;
+        width: 320px;
+        height: auto;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 14vh;
+        z-index: 2;
+        object-fit: contain;
+        display: none; /* esconder background grande no mobile (usamos a .img-mobile) */
+    }
+
+
+    /* retângulo areia atrás da imagem (apenas mobile) */
+    .mobile-rect{
+        position: absolute;
+        width: 320px;
+        height: 360px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 3vh;
+        background: var(--dourado); /* trocar areia por dourado */
+        z-index: 1;
+        border-radius: 18px;
+        box-shadow: 0 8px 26px rgba(0,0,0,0.22);
+        /* modelar com canto arredondado direito superior para se aproximar do figma */
+        clip-path: polygon(0 0, 72% 0, 100% 18%, 100% 100%, 0 80%);
+    }
+
+    /* Botão conforme Figma: largo, pill, fundo azul escuro com texto branco */
+    .botao_bloqueio{
+        background-color: var(--azul-escuro);
+        color: var(--branco);
+        width: 280px; /* aumentar botão */
+        height: 70px !important;
+        border-radius: 36px;
+        box-shadow: 0 16px 36px rgba(0,0,0,0.44);
+        align-self: center;
+        margin: 0 auto 0 auto !important;
+        justify-content: center;
+        display:flex;
+        z-index: 60; /* acima da esfiha */
+        border: 0;
+        transform: none;
+        position: relative; /* dentro da .gold-content */
+        left: auto;
+        transform: none;
+        bottom: auto;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    /* exibir o bloco mobile com texto + botão sob a esfiha */
+    .gold-content{
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 6vh; /* sobre o retângulo dourado */
+        width: 92%;
+        max-width: 360px;
+        z-index: 30;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px; /* mais espaçamento entre texto e botão */
+    }
+
+    /* na área dourada, texto branco (visível) */
+    .gold-content .linhaum,
+    .gold-content .linhadois { color: var(--branco); }
+
+    .botao_bloqueio .pj{
+        font-size: 40px; /* aumentar texto do CTA */
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    /* Tipografia do H1 em mobile para reproduzir o serif do figma */
+    .linhadois{
+        font-family: 'Simple-Serenity', serif;
+            /* manter como escrita normal no mobile (sem caps) */
+        letter-spacing: 1.6px;
+        font-weight: 700;
+        color: var(--dourado);
+        font-size: 34px;
+        margin-top: 2px !important;
+        line-height: 1.05;
+    }
+
+    /* estilo e posicionamento da esfiha específica do mobile */
+    .img-mobile{
+        display: block;
+        position: absolute;
+        width: 350px;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(-6%);
+        bottom: 32vh; /* subir a esfiha para ficar entre o retângulo e o botão */
+        z-index: 50;
+        object-fit: contain;
+        filter: drop-shadow(0 18px 28px rgba(0,0,0,0.36));
+    }
+
+    /* texto pequeno encima (Mais do que delivery) */
+    .linhaum{
+        font-family: 'Poppins', sans-serif;
+        font-size: 27px;
+        opacity: 0.95;
+        margin-bottom: 2px !important;
+    }
+
+    /* centraliza tudo para ficar igual ao Figma */
+    .conteudo-inicio{ text-align: center; }
+
+    /* Ajustes para que o conteúdo apareça acima do gradiente e imagem */
+    .conteudo-inicio, .logo, .botao_bloqueio, .linhaum, .linhadois { position: relative; }
+
+}

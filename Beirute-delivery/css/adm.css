@@ -1,0 +1,1481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --azul-escuro: #19344f;
+    --dourado: #b78b46;
+    --areia: #f5e3b3;
+    --branco: #ffffff;
+    --preto: #000000;
+    --font-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--areia) !important;
+    font-family: "Poppins", sans-serif;
+    margin-left: 270px;
+}
+
+#editar-body {
+    background-color: var(--areia) !important;
+    font-family: "Poppins", sans-serif;
+    margin-left: 0 !important;
+}
+
+.content-wrapper {
+    padding: 30px !important;
+    margin: 0 auto 0 auto !important;
+}
+
+/* Overview Styles */
+.overview-container {
+    background-color: var(--azul-escuro);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.overview-header h2 {
+    color: var(--dourado);
+    font-family: 'Simple-Serenity', sans-serif;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background-color: var(--dourado);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    color: var(--azul-escuro);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    color: var(--azul-escuro);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Chart Styles */
+.charts-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Gráfico de barras maior que o de pizza */
+    gap: 20px;
+    margin: 20px 0;
+    background: #19344f;
+    /* Fundo azul escuro */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.chart-box {
+    background: #19344f;
+    /* Fundo azul escuro */
+    border-radius: 8px;
+    padding: 15px;
+    height: 400px;
+    /* Altura maior para os gráficos */
+}
+
+/* Estilo para os textos dos gráficos */
+.chart-title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Popular Products */
+.popular-products {
+    background-color: var(--dourado);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.popular-products h3 {
+    color: var(--azul-escuro);
+    font-family: 'Simple-Serenity', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    color: var(--azul-escuro);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    color: var(--dourado);
+    font-weight: 500;
+}
+
+/* Estilo específico para o filtro de perfil na página funcionários */
+.filters {
+    margin: 20px 0;
+    padding: 15px;
+    background: var(--azul-escuro);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.filters form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.filters label {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filters select {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.filters select:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.filters select option {
+    background-color: #2a5298;
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .filters form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters select {
+        width: 100%;
+    }
+
+    .filters label {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'Simple-Serenity';
+    src: url('../fonte/Simple-Serenity-Serif.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    background-color: var(--azul-escuro);
+    font-family: 'Simple-Serenity', sans-serif;
+    color: var(--branco);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -30px !important;
+    padding: 6px 0;
+    width: 600px;
+    margin-top: -30px !important;
+    margin: 0 auto;
+}
+
+form-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 30px !important;
+    background-color: rgb(255, 242, 225) !important;
+}
+
+/* também aplicar estilos aos inputs/textarea/select que NÃO usam a classe .input */
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    border: none;
+    background-color: var(--dourado);
+    border-radius: 0.75rem;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    color: var(--preto);
+    font-family: 'Poppins', sans-serif !important;
+    transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px !important;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--azul-escuro);
+    font-weight: 600;
+    width: 100%;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.admin-form h2 {
+    color: #19344f;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.ativo {
+    text-align: center;
+}
+
+
+form textarea {
+    height: 120px;
+    padding-top: 10px;
+    resize: vertical;
+}
+
+form button,
+form input[type="submit"] {
+    width: 70%;
+    height: 50px;
+    border: none;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 40px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    cursor: pointer;
+    /* centralizar texto verticalmente e horizontalmente */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif !important;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px !important;
+    /* remover padding-bottom que desloca verticalmente o texto */
+    padding: 0 20px !important;
+}
+
+.alert{
+    background-color: rgba(0, 209, 0, 0.756);
+    color: green;
+}
+
+
+.container {
+    --transition: 350ms;
+    --folder-W: 120px;
+    --folder-H: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    background: var(--dourado);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    height: calc(var(--folder-H) * 2);
+    position: relative;
+    margin-top: 60px;
+    width: 520px;
+}
+
+.folder {
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 60px);
+    animation: float 2.5s infinite ease-in-out;
+    transition: transform var(--transition) ease;
+}
+
+.folder:hover {
+    transform: scale(1.05);
+}
+
+.folder .front-side,
+.folder .back-side {
+    position: absolute;
+    transition: transform var(--transition);
+    transform-origin: bottom center;
+}
+
+.folder .back-side::before,
+.folder .back-side::after {
+    content: "";
+    display: block;
+    background-color: white;
+    opacity: 0.5;
+    z-index: 0;
+    width: var(--folder-W);
+    height: var(--folder-H);
+    position: absolute;
+    transform-origin: bottom center;
+    border-radius: 15px;
+    transition: transform 350ms;
+    z-index: 0;
+}
+
+.container:hover .back-side::before {
+    transform: rotateX(-5deg) skewX(5deg);
+}
+
+.container:hover .back-side::after {
+    transform: rotateX(-15deg) skewX(12deg);
+}
+
+.folder .front-side {
+    z-index: 1;
+}
+
+.container:hover .front-side {
+    transform: rotateX(-40deg) skewX(15deg);
+}
+
+.folder .tip {
+    background: linear-gradient(135deg, #ff9a56, #ff6f56);
+    width: 80px;
+    height: 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -10px;
+    z-index: 2;
+}
+
+.folder .cover {
+    background: linear-gradient(135deg, #ffe563, #ffc663);
+    width: var(--folder-W);
+    height: var(--folder-H);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.custom-file-upload {
+    font-size: 1.1em;
+    color: #ffffff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background var(--transition) ease;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 35px;
+    position: relative;
+}
+
+.custom-file-upload:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Estilos para a tabela de produtos */
+.produtos-table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: var(--areia);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produtos-table h3 {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 15px;
+    margin: 0;
+    font-family: 'Simple-Serenity', sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+.produtos-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.produtos-table th {
+    background-color: var(--dourado);
+    color: var(--branco);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.produtos-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--dourado);
+    color: var(--azul-escuro);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+}
+
+.produtos-table tr:nth-child(even) {
+    background-color: rgba(183, 139, 70, 0.1);
+}
+
+.produtos-table tr:hover {
+    background-color: rgba(183, 139, 70, 0.2);
+}
+
+.produtos-table img {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.produtos-table img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a coluna de ingredientes */
+.produtos-table td:nth-child(8) {
+    max-width: 250px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.produtos-table td:nth-child(8):hover {
+    background-color: var(--areia);
+    cursor: pointer;
+}
+
+/* Estilos para botões de ação na tabela */
+.actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--branco);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+.btn-edit {
+    background: linear-gradient(180deg, #2a68a0, var(--azul-escuro));
+    box-shadow: 0 4px 8px rgba(25, 52, 79, 0.12);
+}
+
+.btn-delete {
+    background: linear-gradient(180deg, #d9534f, #c5302b);
+    box-shadow: 0 4px 8px rgba(197, 60, 60, 0.12);
+}
+
+.btn-action:hover {
+    transform: translateY(-2px);
+}
+
+/* ícone simples com pseudo-elemento */
+.btn-action.icon-left::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: -4px;
+    vertical-align: middle;
+    background-size: contain;
+}
+
+.btn-edit.icon-left::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1.003 1.003 0 0 0 0-1.41l-2.34-2.34a1.003 1.003 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z'/%3E%3C/svg%3E");
+}
+
+.btn-delete.icon-left::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 480px) {
+    .btn-action {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--azul-escuro);
+}
+
+.close:hover {
+    color: var(--dourado);
+}
+
+/* Conteúdo pode ser posicionado (para arrastar usamos position:absolute) */
+.modal-content {
+    width: 100%;
+    max-width: 640px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    margin: 0;
+    border-radius: 10px;
+    position: absolute; /* usamos absolute para permitir mover livremente dentro do overlay */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* centraliza por padrão */
+    background: transparent; /* inner controla visual */
+}
+
+/* Quando o modal está ancorado no topo (conteúdo maior que a viewport) */
+.modal.align-top .modal-content {
+    top: 30px;
+    transform: translateX(-50%); /* manter centralização horizontal */
+}
+
+/* Cursor indicador de arraste no cabeçalho (h1) */
+.modal-content .admin-form-inner h1,
+.modal-content .admin-form-inner .modal-header {
+    cursor: move;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* quando movido manualmente, remover transform para usar left/top diretos */
+.modal-content.is-dragging {
+    transform: none !important;
+}
+
+/* Pequeno ajuste para evitar seleção durante arraste */
+.modal-content.is-dragging * { pointer-events: auto; }
+
+/* Responsividade: permitir rolagem vertical se necessário */
+@media (max-height: 600px) {
+    .modal-content { max-height: calc(100vh - 40px); }
+}
+
+/* Conteúdo interno já estilizado (.admin-form-inner) */
+.modal-content .admin-form-inner {
+    padding: 22px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Estilo do Formulário dentro do Modal */
+.modal .admin-form {
+    padding: 26px 28px 22px 28px; /* mais espaço vertical e laterais */
+    background: #fff;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.modal .admin-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal .admin-form input[type="text"],
+.modal .admin-form input[type="email"],
+.modal .admin-form input[type="password"],
+.modal .admin-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.modal .button-row {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.modal .button-row button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal .button-row button[type="submit"] {
+    background-color: var(--azul-escuro);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .button-row button[type="submit"] p {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.modal .button-row .cancel-btn {
+    background-color: var(--dourado);
+    color: white;
+}
+
+.modal .button-row .cancel-btn p{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* ===== Modal: harmonizar com .admin-form (inputs, selects, botões) ===== */
+.modal-content.admin-form {
+    width: 100%;
+    margin: 5% auto;
+    padding: 0;
+    /* o inner terá padding igual ao form padrão */
+    border-radius: 8px;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* reaplica o container do form com mesmo visual do formulário padrão */
+.modal-content.admin-form .admin-form-inner {
+    /* cor de fundo do form principal */
+    padding: 22px;
+    box-shadow: none;
+    border-radius: 8px;
+    font-family: var(--font-principal) !important;
+}
+
+/* título idêntico ao do form principal */
+/* garantir estilo apropriado para títulos dentro de modais que usam .admin-form
+    (o arquivo tinha um h1 global com largura fixa que fazia o título vazar) */
+.modal-content .admin-form h1,
+.modal-content.admin-form .admin-form-inner h1 {
+    margin: 0 0 18px 0;
+    padding: 14px 22px;
+    background: #133349;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.1;
+    text-align: center;
+    border-radius: 8px 8px 6px 6px;
+    width: 100% !important;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: normal; /* allow wrapping */
+    word-break: break-word;
+}
+
+/* inputs / selects com mesmo visual */
+.modal-content.admin-form .admin-form-inner input[type="text"],
+.modal-content.admin-form .admin-form-inner input[type="email"],
+.modal-content.admin-form .admin-form-inner input[type="password"],
+.modal-content.admin-form .admin-form-inner select,
+.modal-content.admin-form .admin-form-inner textarea,
+.modal-content.admin-form .admin-form-inner label {
+    font-family: var(--font-principal) !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    background: #b58844;
+    color: #0f2740;
+    border: none;
+    border-radius: 12px; /* softer pill-like inputs matching design */
+    font-size: 15px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* mantém seta customizada do select e cursor */
+.modal-content.admin-form .admin-form-inner select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, rgba(15, 39, 64, 0.9) 50%),
+        linear-gradient(135deg, rgba(15, 39, 64, 0.9) 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+/* checkbox alinhamento idêntico */
+.modal-content.admin-form .admin-form-inner .checkbox-row {
+    margin: 8px 0 12px;
+}
+
+.modal-content.admin-form .admin-form-inner .checkbox-row label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0f2740;
+}
+
+/* botões com mesmo estilo do form principal */
+.modal-content.admin-form .admin-form-inner .button-row {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 0px;
+}
+
+.modal-content.admin-form .admin-form-inner .button-row button,
+.modal-content.admin-form .admin-form-inner .button-row .button {
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* botão salvar (verde) */
+.modal-content.admin-form .admin-form-inner .button-row button[type="submit"] {
+    background: #3fb655;
+    color: #fff;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* botão cancelar (vermelho) */
+.modal-content.admin-form .admin-form-inner .cancel-btn {
+    background: #f04b45;
+    color: #fff;
+}
+
+/* fechar (x) */
+.modal-content.admin-form .close {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    color: #fff;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.35);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* responsividade */
+@media (max-width: 480px) {
+    .modal-content.admin-form {
+        margin: 8% 10px;
+    }
+
+    .modal-content.admin-form .admin-form-inner h1 {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    .modal-content.admin-form .admin-form-inner .button-row {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Novas classes para a seção de ingredientes */
+.ingredientes-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+/* grid para lista de ingredientes (usado no formulário de cadastro e no modal) */
+.ingredientes-grid,
+#ingredientes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* cada item de ingrediente agora usa grid para alinhar checkbox, nome e quantidade */
+.ingrediente-item,
+#ingredientes-list label {
+    display: grid;
+    grid-template-columns: 22px 1fr 72px;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 6px;
+    background: transparent; /* manter leve */
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+#ingredientes-list label:hover {
+    background: rgba(19,52,79,0.04);
+    border-color: rgba(19,52,79,0.06);
+}
+
+.qtd-ingrediente {
+    width: 64px;
+    height: 36px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    background: var(--dourado);
+    color: #0f2740;
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+#ingredientes-list .qtd-ingrediente:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Novos estilos para checkbox */
+.checkbox-row {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-row label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-row input[type="checkbox"],
+#ingredientes-list input[type="checkbox"],
+#modal-editar input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Estilos do Modal de Ingredientes */
+.modal-ingredientes {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredientes-lista {
+    margin-top: 20px;
+}
+
+.ingredientes-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredientes-lista li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--areia-claro);
+}
+
+.btn-view {
+    background-color: var(--azul-escuro);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-view:hover {
+    background-color: var(--dourado);
+}
+
+.btn-view i {
+    font-size: 14px;
+}
+
+#produto-nome {
+    color: var(--azul-escuro);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--dourado);
+}
+
+/* Estilos para a seção de ingredientes no modal */
+.modal .ingredientes-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--areia-claro);
+    border-radius: 8px;
+}
+
+.modal .ingredientes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+    max-height: 360px;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.modal .ingrediente-item {
+    display: grid;
+    grid-template-columns: 22px 1fr 56px;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--areia-claro);
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.modal .qtd-ingrediente {
+    width: 70px;
+    padding: 5px;
+    border: 1px solid var(--azul-escuro);
+    border-radius: 4px;
+}
+
+.modal .qtd-ingrediente:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.modal .button-row {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal .btn-save,
+.modal .btn-cancel {
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal .btn-save {
+    background-color: var(--azul-escuro);
+    color: white;
+    border: none;
+}
+
+.modal .btn-cancel {
+    background-color: var(--areia);
+    border: 1px solid var(--azul-escuro);
+}
+
+/*===================== Banner =====================*/
+.banners-table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto !important;
+    background-color: var(--areia);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banners-table h3 {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 15px !important;
+    margin: 0 !important;
+    font-family: 'Simple-Serenity', sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+.banners-table form {
+    width: 100%;
+}
+
+.banners-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--areia);
+}
+
+.banners-table th {
+    background-color: var(--dourado);
+    color: var(--branco);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 15px !important;
+    text-align: left;
+    font-size: 0.95rem;
+    text-transform: capitalize;
+}
+
+.banners-table td {
+    padding: 15px !important;
+    border-bottom: 1px solid #ddd;
+    color: var(--azul-escuro);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+.banners-table tr:nth-child(even) {
+    background-color: rgba(183, 139, 70, 0.08);
+}
+
+.banners-table tr:hover {
+    background-color: rgba(183, 139, 70, 0.15);
+}
+
+.banners-table img {
+    border-radius: 8px;
+    width: 80px;
+    height: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.banners-table img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Input de ordem */
+.banners-table td input[type="number"] {
+    width: 80px;
+    padding: 10px !important;
+    border: 2px solid var(--dourado);
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--azul-escuro);
+    background-color: var(--branco);
+    transition: border-color 0.3s ease;
+}
+
+.banners-table td input[type="number"]:focus {
+    outline: none;
+    border-color: var(--azul-escuro);
+    box-shadow: 0 0 5px rgba(183, 139, 70, 0.3);
+}
+
+/* Grupo de botões */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Botão Desativar/Ativar */
+.btn-toggle {
+    background: linear-gradient(180deg, #ffc107, #ff9800);
+    padding: 10px 14px !important;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--branco);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(255, 152, 0, 0.3);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-toggle:hover {
+    background: linear-gradient(180deg, #ff9800, #f57c00);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255, 152, 0, 0.4);
+}
+
+.btn-toggle:active {
+    transform: translateY(0);
+}
+
+/* Botão Deletar */
+.btn-delete {
+    background: linear-gradient(180deg, #dc3545, #c82333);
+    padding: 10px 14px !important; 
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--branco);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(220, 53, 69, 0.3);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-delete:hover {
+    background: linear-gradient(180deg, #c82333, #bd2130);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(220, 53, 69, 0.4);
+}
+
+.btn-delete:active {
+    transform: translateY(0);
+}
+
+/* Botão Salvar Ordem */
+.btn-salvar-ordem {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto !important;
+    padding: 16px 30px !important;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+    display: block;
+}
+
+.btn-salvar-ordem:hover {
+    background: linear-gradient(135deg, #20c997 0%, #28a745 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-salvar-ordem:active {
+    transform: translateY(-1px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .banners-table {
+        width: 95%;
+    }
+
+    .banners-table th {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .banners-table td {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .btn-toggle,
+    .btn-delete {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .banners-table td input[type="number"] {
+        width: 60px;
+        padding: 8px;
+    }
+
+    .btn-salvar-ordem {
+        max-width: 100%;
+        margin: 20px 10px;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin-left: 0;
+    }
+
+    .banners-table {
+        width: 98%;
+        margin: 20px auto;
+    }
+
+    .banners-table th,
+    .banners-table td {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .btn-toggle,
+    .btn-delete {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+}
+
+.grid-cardapio {
+  margin-top: 90px !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 100px;
+  /* Espaçamento geral entre os itens */
+  column-gap: 30px;
+  /* Reduzindo o espaçamento horizontal */
+  justify-items: center;
+}
+
+.card-total {
+  background-color: #b78c46;
+  height: 360px;
+  width: 250px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.add h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  color: var(--branco);
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #19344f;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 220px;
+}
+
+
+
+.escrita h2 {
+  font-size: 20px;
+  color: var(--branco);
+  margin-top: 10px;
+  bottom: -50px !important;
+  position: relative;
+  z-index: 1;
+}
+
+.add {
+  position: relative;
+  bottom: -80px;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.circulo {
+  background-color: #19344f;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  width: 250px;
+  height: 220px;
+  position: absolute;
+  top: -50px;
+}
+
+.circulo img {
+  width: 200px;
+  height: 200px;
+  margin-top: 65px !important;
+}
+
+.parte-conteudo {
+  position: relative;
+  bottom: -35px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
