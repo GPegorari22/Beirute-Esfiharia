@@ -1,0 +1,30 @@
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos compactados
+*.zip
+*.7z
+*.rar
+
+# Backups de banco
+*.sql
+*.bak
+
+# Arquivos de ambiente
+.env
+
+# Dependências
+node_modules/
+vendor/
+
+# IDEs
+.vscode/
+.idea/
+
+# Temporários
+*.tmp
+*.cache
